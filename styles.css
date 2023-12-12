@@ -1,0 +1,24 @@
+header{
+}
+
+header nav {
+}
+
+header nav ul {
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+
+}
+
+@media screen and (min-width:601px) and (max-width:900px){ /* Adding Media Query for Ipad accessibility reasons?*/
+
+}
+
+@media screen and (min-width:901px) { /* Adding Media Query for laptop accessibility reasons?*/
+
+}
