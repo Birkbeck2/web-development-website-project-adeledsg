@@ -1,24 +1,157 @@
+/*colour palette colour blind friendly https://color.adobe.com/ibm-color-blind-friendly-color-theme-15173253/#:~:text=This%20color%20theme%20consists%20of,Vivid%20Orange%20and%20Gold%20Fusion.*/
+
 header{
+    text-align: right; /*aligning my nav to the right explain why)*/
 }
 
 header nav {
+    background-color: #FFB001; /*pink a colour scheme - colour blind people for the B&VI idea*/
+    padding: 1%;
 }
 
 header nav ul {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
 }
 
 header nav ul li {
     display: inline;
+    margin-right: 20px;
 }
 
 header nav ul li a {
+    padding: 5px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #648FFF;
+    font-weight: 700;
+}
 
+/* Focus Styles */
+nav a:focus {
+    outline: 2px solid #DD2680;
+    background-color: #648FFF;
+    color: #FFB001;
+}
+
+.breadcrumbs{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.breadcrumbs ul li{
+    display: inline;
+    list-style: none;
+    text-decoration: none;
+}
+
+.breadcrumbs li a{
+    color: #648FFF; 
+    text-decoration: none;
+}
+
+.breadcrumbs li+li::before {
+    color: #648FFF; 
+    content: "/ \00a0 ";
+}
+
+.flexbox-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.video-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 @media screen and (min-width:601px) and (max-width:900px){ /* Adding Media Query for Ipad accessibility reasons?*/
 
+    header{
+        text-align: right; /*aligning my nav to the right explain why)*/
+    }
+    
+    header nav {
+        background-color: #FFB001; /*pink a colour scheme - colour blind people for the B&VI idea*/
+        padding: 1%;
+    }
+    
+    header nav ul {
+        list-style: none;
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+    }
+    
+    header nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+    
+    header nav ul li a {
+        padding: 5px 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        color: #648FFF;
+        font-weight: 700;
+    }
+    
+    
+    /* Focus Styles */
+    nav a:focus {
+        outline: 2px solid #DD2680;
+        background-color: #648FFF;
+        color: #FFB001;
+    }
+    
 }
 
 @media screen and (min-width:901px) { /* Adding Media Query for laptop accessibility reasons?*/
+
+    header{
+        text-align: right; /*aligning my nav to the right explain why)*/
+    }
+    
+    header nav {
+        background-color: #FFB001; /*pink a colour scheme - colour blind people for the B&VI idea*/
+        padding: 1%;
+    }
+    
+    header nav ul {
+        list-style: none;
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+    }
+    
+    header nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+    
+    header nav ul li a {
+        padding: 5px 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        color: #648FFF;
+        font-weight: 700;
+    }
+    
+    
+    /* Focus Styles */
+    nav a:focus {
+        outline: 2px solid #DD2680;
+        background-color: #648FFF;
+        color: #FFB001;
+    }    
 
 }
