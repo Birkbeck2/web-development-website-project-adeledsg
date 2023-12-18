@@ -1,43 +1,71 @@
-/*colour palette colour blind friendly https://color.adobe.com/ibm-color-blind-friendly-color-theme-15173253/#:~:text=This%20color%20theme%20consists%20of,Vivid%20Orange%20and%20Gold%20Fusion.*/
-
+/*Nav bar Styles*/
 header{
-    text-align: right; /*aligning my nav to the right explain why)*/
+    text-align: right;
+    width: 100%;
+    margin-top: 2%;
+}
+
+header hr {
+    border: none;
+    height: 1px;
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-right: 5%;
 }
 
 header nav {
-    background-color: #FFB001; /*pink a colour scheme - colour blind people for the B&VI idea*/
-    padding: 1%;
+    display: inline;
+    text-align: right;
+    top: 0; 
+    width: 100%; 
+    padding-right: 5%;
+    z-index: 1000;
 }
 
 header nav ul {
     list-style: none;
     display: inline-block;
+    text-align: right;
     padding: 0;
     margin: 0;
 }
 
 header nav ul li {
     display: inline;
-    margin-right: 20px;
+    text-align: right;
 }
 
 header nav ul li a {
-    padding: 5px 10px;
+    padding: 1px 5px;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
-    color: #648FFF;
     font-weight: 700;
+    color: white;
+}
+
+/* Hover Styles*/
+nav ul li a:hover{
+    outline: 2px solid white;
+    background-color: white;
+    color: black;
 }
 
 /* Focus Styles */
 nav a:focus {
-    outline: 2px solid #DD2680;
-    background-color: #648FFF;
-    color: #FFB001;
+    outline: 2px solid white;
+    background-color: white;
+    color: black;
 }
 
+/* Breadcrumbs Styles */
 .breadcrumbs{
+    text-align: right;
+    padding-right: 3%;
     font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    justify-content: end;
+    font-size: small;
 }
 
 .breadcrumbs ul li{
@@ -46,16 +74,80 @@ nav a:focus {
     text-decoration: none;
 }
 
-.breadcrumbs li a{
-    color: #648FFF; 
+.breadcrumbs li a{ 
     text-decoration: none;
+    color: white;
 }
 
 .breadcrumbs li+li::before {
-    color: #648FFF; 
+    color: white; 
     content: "/ \00a0 ";
 }
 
+/*Home page styles*/
+body {
+    background-color: black;
+    color: white;
+}
+
+.larger{
+    font-size: 2em;
+}
+
+.smaller{
+    font-size: 0.8em;
+}
+
+.flexbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5%;
+}
+
+.body-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5%;
+}
+
+.body-container p {
+    text-align: justify;
+}
+
+/*Footer Styles*/
+.grid-container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-row-gap: 5px;
+}
+
+footer {
+    color: white;
+}
+
+footer hr {
+    border: none;
+    height: 1px;
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-right: 5%;
+}
+
+footer div ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/*flexbox styles - gallery pages*/
 .flexbox-container{
     display: flex;
     flex-direction: column;
@@ -76,82 +168,9 @@ nav a:focus {
 
 @media screen and (min-width:601px) and (max-width:900px){ /* Adding Media Query for Ipad accessibility reasons?*/
 
-    header{
-        text-align: right; /*aligning my nav to the right explain why)*/
-    }
-    
-    header nav {
-        background-color: #FFB001; /*pink a colour scheme - colour blind people for the B&VI idea*/
-        padding: 1%;
-    }
-    
-    header nav ul {
-        list-style: none;
-        display: inline-block;
-        padding: 0;
-        margin: 0;
-    }
-    
-    header nav ul li {
-        display: inline;
-        margin-right: 20px;
-    }
-    
-    header nav ul li a {
-        padding: 5px 10px;
-        font-family: Arial, Helvetica, sans-serif;
-        text-decoration: none;
-        color: #648FFF;
-        font-weight: 700;
-    }
-    
-    
-    /* Focus Styles */
-    nav a:focus {
-        outline: 2px solid #DD2680;
-        background-color: #648FFF;
-        color: #FFB001;
-    }
-    
+
 }
 
 @media screen and (min-width:901px) { /* Adding Media Query for laptop accessibility reasons?*/
-
-    header{
-        text-align: right; /*aligning my nav to the right explain why)*/
-    }
-    
-    header nav {
-        background-color: #FFB001; /*pink a colour scheme - colour blind people for the B&VI idea*/
-        padding: 1%;
-    }
-    
-    header nav ul {
-        list-style: none;
-        display: inline-block;
-        padding: 0;
-        margin: 0;
-    }
-    
-    header nav ul li {
-        display: inline;
-        margin-right: 20px;
-    }
-    
-    header nav ul li a {
-        padding: 5px 10px;
-        font-family: Arial, Helvetica, sans-serif;
-        text-decoration: none;
-        color: #648FFF;
-        font-weight: 700;
-    }
-    
-    
-    /* Focus Styles */
-    nav a:focus {
-        outline: 2px solid #DD2680;
-        background-color: #648FFF;
-        color: #FFB001;
-    }    
-
 }
+
