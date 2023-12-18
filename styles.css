@@ -1,11 +1,15 @@
-/*Nav bar Styles*/
-
+/*Styles for all pages*/
 body {
     font-family: Arial, sans-serif;
     background-color: black;
     color: white;
 }
 
+main{
+    margin-top: 70px; /*This is here so that the main content does not overlap with the navigation bar, equivalent to the height of the navbar*/
+}
+
+/*Nav bar Styles*/
 header {
     position: fixed;
     top: 0;
@@ -33,7 +37,7 @@ nav a {
     font-weight: bold;
 }
 
-/* Hover Styles*/
+/* Hover Styles not necessary for phone*/
 nav ul li a:hover{
     outline: 2px solid white;
     background-color: white;
@@ -49,12 +53,8 @@ nav a:focus {
 
 /* Breadcrumbs Styles */
 .breadcrumbs{
-    text-align: right;
-    padding-right: 3%;
-    font-family: Arial, Helvetica, sans-serif;
-    color:white;
-    justify-content: end;
-    font-size: small;
+    margin-top: 70px;
+    display: flex;
 }
 
 .breadcrumbs ul li{
@@ -74,29 +74,14 @@ nav a:focus {
 }
 
 /*Home page styles*/
-
-main{
-    margin-top: 70px;
-}
-
-.larger{
-    font-size: 2em;
-}
-
-.smaller{
-    font-size: 0.8em;
-}
-
-hr {
-    width: 100%;
-}
-
 .flexbox{
     position: relative;
     top: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-right: 5%;
+    padding-left: 5%;
 }
 
 .title-container {
@@ -104,7 +89,24 @@ hr {
     left: 0px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: right;
+}
+
+.larger{
+    font-size: 2em; /*Explain the use of em*/
+}
+
+.smaller{
+    font-size: 1em;
+}
+
+.between{
+    font-size: 1.5em;
+    margin-right: 15px;
+}
+
+hr {
+    width: 100%;
 }
 
 .body-container {
@@ -116,9 +118,23 @@ hr {
 
 .body-container p {
     text-align: justify;
+    line-height: 2;
+    font-size: 100%;
 }
 
 /*Footer Styles*/
+footer {
+    position: relative;
+    bottom: 0;
+    color: white;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+footer hr {
+    width: 100%;
+}
+
 .socials{
     display: grid;
     grid-template-columns: auto auto auto;
@@ -126,44 +142,33 @@ hr {
     list-style-type: none;
 }
 
-footer {
-    color: white;
-}
+/*Styles for h1 titles (except home page)*/
 
-footer hr {
-    border: none;
-    height: 1px;
-    background-color: white;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-right: 5%;
+.city-name{
+    padding-left: 5%;
 }
-
-footer div ul li a {
-    text-decoration: none;
-    color: white;
-}
-
 /*flexbox styles - gallery pages*/
 .flexbox-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 3px;
+    gap: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .video-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 3px;
+    gap: 10px;
 }
 
 .image-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 3px;
+    gap: 10px;
 }
 
 /*Contact form style*/
