@@ -1,47 +1,36 @@
 /*Nav bar Styles*/
-header{
-    text-align: right;
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+header {
+    position: fixed;
+    top: 0;
     width: 100%;
-    margin-top: 2%;
-}
-
-header hr {
-    border: none;
-    height: 1px;
-    background-color: white;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-right: 5%;
-}
-
-header nav {
-    display: inline;
-    text-align: right;
-    top: 0; 
-    width: 100%; 
-    padding-right: 5%;
+    height: 70px;
+    background-color: black;
     z-index: 1000;
 }
 
-header nav ul {
-    list-style: none;
-    display: inline-block;
-    text-align: right;
-    padding: 0;
-    margin: 0;
+nav ul {
+    list-style-type: none;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-header nav ul li {
+nav ul li {
     display: inline;
-    text-align: right;
 }
 
-header nav ul li a {
-    padding: 1px 5px;
-    font-family: Arial, Helvetica, sans-serif;
+nav a {
     text-decoration: none;
-    font-weight: 700;
     color: white;
+    font-weight: bold;
 }
 
 /* Hover Styles*/
@@ -85,9 +74,9 @@ nav a:focus {
 }
 
 /*Home page styles*/
-body {
-    background-color: black;
-    color: white;
+
+main{
+    margin-top: 70px;
 }
 
 .larger{
@@ -98,24 +87,31 @@ body {
     font-size: 0.8em;
 }
 
+hr {
+    width: 100%;
+}
+
 .flexbox{
+    position: relative;
+    top: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .title-container {
+    position: relative;
+    left: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 5%;
 }
 
 .body-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 5%;
 }
 
 .body-container p {
@@ -123,10 +119,11 @@ body {
 }
 
 /*Footer Styles*/
-.grid-container{
+.socials{
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: auto auto auto;
     grid-row-gap: 5px;
+    list-style-type: none;
 }
 
 footer {
@@ -152,19 +149,25 @@ footer div ul li a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 3px;
 }
 
 .video-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 3px;
 }
 
 .image-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 3px;
 }
+
+/*Contact form style*/
+
 
 @media screen and (min-width:601px) and (max-width:900px){ /* Adding Media Query for Ipad accessibility reasons?*/
 
