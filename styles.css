@@ -6,8 +6,7 @@ body {
 }
 
 main{ /*code so that jsut the nav bar is fixed for the phone but not footer*/
-    margin-top: 10%; /*This is here so that the main content does not overlap with the navigation bar, equivalent to the height of the navbar*/
-    margin-bottom: 10%;
+    margin-top: 90px; /*This is here so that the main content does not overlap with the navigation bar, equivalent to the height of the navbar*/
 }
 
 /*Nav bar Styles*/
@@ -15,18 +14,18 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 10%;
+    height: 90px;
     z-index: 1000;
-    line-height: 0.05;
     background-color: black;
 }
 
 .navbar ul {
     list-style-type: none;
-    padding: 10px 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .navbar ul li {
@@ -55,6 +54,16 @@ header {
 /* Breadcrumbs Styles */
 .breadcrumbs{
     display: flex;
+    position: fixed;
+    right: 0;
+    line-height: 0.05;
+    padding-right: 5%;
+}
+
+.breadcrumbs ul {
+    display: flex;
+    justify-content: end;
+
 }
 
 .breadcrumbs ul li{
@@ -70,7 +79,7 @@ header {
 
 .breadcrumbs li+li::before {
     color: white; 
-    content: "/ \00a0 ";
+    content: "/\00a0 ";
 }
 
 /*Home page styles*/
@@ -120,15 +129,13 @@ hr {
 
 /*Footer Styles*/
 footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     z-index: 1000;
     color: white;
     padding-right: 5%;
     padding-left: 5%;
     text-decoration: none;
-    background-color: black;
-    height: 10%;
 }
 
 footer hr {
