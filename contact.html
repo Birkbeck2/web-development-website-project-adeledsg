@@ -11,8 +11,7 @@
 
 <body>
     <header>
-        <img>
-        <nav>
+        <nav class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="seoul.html">Seoul</a></li>
@@ -21,15 +20,15 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        
+        <nav class="breadcrumbs"> <!--Installing breadcrumbs for usability and accessibility purposes. Screen reader reads outloud the breadcrumb and the nav tag gives semantic context. Need to add Aria label.-->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>Contact</li>
+            </ul>
+        </nav>
     </header>
 
-    <nav class="breadcrumbs"> <!--Installing breadcrumbs for usability and accessibility purposes. Screen reader reads outloud the breadcrumb and the nav tag gives semantic context. Need to add Aria label.-->
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li>Contact</li>
-        </ul>
-    </nav>
-    
     <main>
         <h1 class="city-name">Contact me</h1>
         <form method="post">
