@@ -18,7 +18,7 @@
                 <li><a href="seoul.html">Seoul</a></li>
                 <li><a href="paris.html">Paris</a></li>
                 <li><a href="brussels.html">Brussels</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
+                <li><a href="contact.html">Contact me</a></li>
             </ul>
         </nav>
     </header>
@@ -31,7 +31,35 @@
     </nav>
     <main>
         <h1>Contact Me</h1>
+        <form method="post">
+            <div class="form-section" aria-labelledby="first-name">
+              <label for="first-name">Your first name</label>
+              <input id="first-name" name="first-name" type="text" placeholder="Enter your first name">
+            </div>
+            <div class="form-section" aria-labelledby="last-name">
+              <label for="last-name">Your last name</label>
+              <input id="last-name" name="last-name" type="text" placeholder="Enter your last name">
+            </div>
+            <div class="form-section" aria-labelledby="email">
+              <label for="email">Your email</label>
+              <input id="email" name="email" type="email" placeholder="Enter your e-mail address">
+            </div>
+            <div class="form-section" aria-labelledby="message">
+              <label for="message">Your message</label>
+              <textarea id="message" name="message"></textarea>
+            </div>
+              <button aria-label="submit form" type="submit">Send</button>
     </main>
+
+    <footer>
+        <h3>Want to see more?</h3>
+        <hr>
+        <ul class="socials">
+            <li><a href="http://www.example.org"><img src="images/instagram-icon.png" alt="Instagram icon" width="30%"></a></li>
+            <li><a href="http://www.example.org"><img src="images/facebook-icon.png" alt="Facebook icon" width="30%"></a></li>
+            <li><a href="http://www.example.org"><img src="images/pinterest-icon.png" alt="Pinterest icon" width="30%"></a></li>
+        </ul>
+    </footer>
 </body>
 
 </html>
