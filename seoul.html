@@ -11,17 +11,15 @@
 
 <body>
     <header>
-        <img>
-        <nav>
+        <nav class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="seoul.html">Seoul</a></li>
                 <li><a href="paris.html">Paris</a></li>
                 <li><a href="brussels.html">Brussels</a></li>
-                <li><a href="contact.html">Contact me</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-    </header>
 
         <nav class="breadcrumbs"> <!--Installing breadcrumbs for usability and accessibility purposes. Screen reader reads outloud the breadcrumb and the nav tag gives semantic context. Need to add Aria label.-->
             <ul>
@@ -29,23 +27,26 @@
                 <li>Seoul</li>
             </ul>
         </nav>
+    </header>
 
     <main>
-        <h1>Seoul</h1>
+        
+        <div class="grid-second">
+            <h1 class="city-name">Seoul</h1>
 
-        <div class="flexbox-container"> <!--Justify here why flexbox and not grid-->
+            <div class="flexbox-container"> <!--Justify here why flexbox and not grid-->
 
-            <div class="video-container"> <!--Source W3C, make sure it meets accessibility criteria, have alt, height, width-->
-                <video src="images/Seoul.mp4" type="video/mp4" controls></video>
+                <div class="video-container"> <!--Source W3C, make sure it meets accessibility criteria, have alt, height, width-->
+                    <video src="images/Seoul.mp4" type="video/mp4" controls></video>
+                </div>
+
+                <div class="image-container"> <!--make sure all images have have width, height, alt-->
+                    <img src="images/ramen.jpg">
+                    <img src="images/sushi.jpg">
+                    <img src="images/broth.jpg">
+                    <img src="images/tofu.jpg">
+                </div>
             </div>
-
-            <div class="image-container"> <!--make sure all images have have width, height, alt-->
-                <img src="images/ramen.jpg">
-                <img src="images/sushi.jpg">
-                <img src="images/broth.jpg">
-                <img src="images/tofu.jpg">
-            </div>
-
         </div>
     </main>
 

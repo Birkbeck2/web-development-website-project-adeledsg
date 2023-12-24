@@ -1,47 +1,53 @@
-/*Nav bar Styles*/
+/*Phone version styles*/
 
+/*Styles for all pages*/
 body {
     font-family: Arial, sans-serif;
     background-color: black;
     color: white;
 }
 
+main{ /*code so that jsut the nav bar is fixed for the phone but not footer*/
+    margin-top: 90px; /*This is here so that the main content does not overlap with the navigation bar, equivalent to the height of the navbar*/
+}
+
+/*Nav bar Styles*/
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 70px;
-    background-color: black;
+    height: 90px;
     z-index: 1000;
+    background-color: black;
 }
 
-nav ul {
+.navbar ul {
     list-style-type: none;
-    padding: 10px 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
-nav ul li {
+.navbar ul li {
     display: inline;
 }
 
-nav a {
+.navbar a {
     text-decoration: none;
     color: white;
     font-weight: bold;
 }
 
-/* Hover Styles*/
-nav ul li a:hover{
+/* Focus Styles */
+.navbar a:focus {
     outline: 2px solid white;
     background-color: white;
     color: black;
 }
 
-/* Focus Styles */
-nav a:focus {
+.breadcrumbs a:focus {
     outline: 2px solid white;
     background-color: white;
     color: black;
@@ -49,12 +55,17 @@ nav a:focus {
 
 /* Breadcrumbs Styles */
 .breadcrumbs{
-    text-align: right;
-    padding-right: 3%;
-    font-family: Arial, Helvetica, sans-serif;
-    color:white;
+    display: flex;
+    position: fixed;
+    right: 0;
+    line-height: 0.05;
+    padding-right: 5%;
+}
+
+.breadcrumbs ul {
+    display: flex;
     justify-content: end;
-    font-size: small;
+
 }
 
 .breadcrumbs ul li{
@@ -70,104 +81,172 @@ nav a:focus {
 
 .breadcrumbs li+li::before {
     color: white; 
-    content: "/ \00a0 ";
+    content: "/\00a0 ";
 }
 
 /*Home page styles*/
+.grid-main{
+    position: relative;
+    top: 0;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    padding-right: 5%;
+    padding-left: 5%;
+}
 
-main{
-    margin-top: 70px;
+.title-container {
+    position: relative;
+    left: 0px;
+    line-height: 0.9;
 }
 
 .larger{
-    font-size: 2em;
+    font-size: 2em; /*Explain the use of em*/
 }
 
 .smaller{
-    font-size: 0.8em;
+    font-size: 1em;
+}
+
+.between{
+    font-size: 1.5em;
+    margin-right: 15px;
 }
 
 hr {
     width: 100%;
 }
 
-.flexbox{
-    position: relative;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.title-container {
-    position: relative;
-    left: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 .body-container {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    top: 0;
+    
 }
 
 .body-container p {
     text-align: justify;
+    line-height: 2;
+    font-size: 100%;
 }
 
 /*Footer Styles*/
-.socials{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-row-gap: 5px;
-    list-style-type: none;
-}
-
 footer {
+    position: relative;
+    bottom: 0;
+    z-index: 1000;
     color: white;
+    padding-right: 5%;
+    padding-left: 5%;
+    text-decoration: none;
 }
 
 footer hr {
-    border: none;
-    height: 1px;
-    background-color: white;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-right: 5%;
+    width: 100%;
 }
 
-footer div ul li a {
-    text-decoration: none;
-    color: white;
+.socials{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
 }
 
-/*flexbox styles - gallery pages*/
+footer a:focus {
+    outline: 2px solid white;
+    background-color: black;
+    color: black;
+}
+
+/*Styles for h1 titles (except home page)*/
+
+.city-name{
+    padding-left: 5%;
+}
+
+/*gallery pages styles*/
 .flexbox-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 3px;
+    gap: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .video-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 3px;
+    gap: 10px;
 }
 
 .image-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 3px;
+    gap: 10px;
 }
 
-/*Contact form style*/
+/*Contact form style https://blog.logrocket.com/how-to-style-forms-with-css-a-beginners-guide/*/
 
+form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.form-section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.form-section label {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.form-section input{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding:10px;
+    margin:10px 0;
+    border-radius:10px;
+
+}
+
+.form-section textarea{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding:10px;
+    margin:10px 0;
+    border-radius:10px;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+button{
+    padding:10px;
+    margin:10px 0;
+    border-radius:10px;
+}
 
 @media screen and (min-width:601px) and (max-width:900px){ /* Adding Media Query for Ipad accessibility reasons?*/
 
