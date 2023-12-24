@@ -186,8 +186,65 @@ footer a:focus {
     gap: 10px;
 }
 
-/*Contact form style*/
+/*Contact form style https://blog.logrocket.com/how-to-style-forms-with-css-a-beginners-guide/*/
 
+form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.form-section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.form-section label {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.form-section input{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding:10px;
+    margin:10px 0;
+    border-radius:10px;
+
+}
+
+.form-section textarea{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding:10px;
+    margin:10px 0;
+    border-radius:10px;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+button{
+    padding:10px;
+    margin:10px 0;
+    border-radius:10px;
+}
 
 @media screen and (min-width:601px) and (max-width:900px){ /* Adding Media Query for Ipad accessibility reasons?*/
 
