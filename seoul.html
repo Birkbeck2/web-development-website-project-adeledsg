@@ -30,23 +30,32 @@
     </header>
 
     <main>
-        <div class="grid-second">
+        <section class="grid-second">
             <h1 class="city-name">Seoul</h1>
 
             <div class="flexbox-container"> <!--Justify here why flexbox and not grid-->
     
                 <div class="video-container"> <!--Source W3C, make sure it meets accessibility criteria, have alt, height, width-->
-                    <video src="images/Seoul.mp4" type="video/mp4" controls></video>
+                    <video width="1920" height="1080" src="images/Seoul.mp4" controls></video> <!--https://www.w3schools.com/tags/att_video_width.asp-->
+
+                    <article class="video-transcript">
+                        <h2>In the street of Seoul</h2>
+                        <p>You are walking in Seoul at night. The streets are in turmoil. 
+                        You stand next to a food truck where the owners serve the rushed customers.
+                        While you are calming standing, the busy lives of people unfoled in front of you,
+                        yet still rythmed by the street food of Seoul.
+                        </p>
+                    </article>
                 </div>
     
                 <div class="image-container"> <!--make sure all images have have width, height, alt-->
-                    <img src="images/ramen.jpg" width="1920" height="1277" alt="x">
-                    <img src="images/sushi.jpg" width="1920" height="1280" alt="x">
-                    <img src="images/broth.jpg" width="1920" height="1280" alt="x">
-                    <img src="images/tofu.jpg" width="1920" height="1280" alt="x">
+                    <img src="images/ramen.jpg" width="1920" height="1277" alt="A bird's eye view of a ramen bowl filled with egg noodles, boiled egg, fresh spinach, sauteed mushrooms and marinated sliced chicken.">
+                    <img src="images/sushi.jpg" width="1920" height="1280" alt="A geometric display of suchi composed of california maki rolls and tuna and salmon sashimi.">
+                    <img src="images/broth.jpg" width="1920" height="1280" alt="A close up of a rich and spicy beef broth garnished with fresh coriander.">
+                    <img src="images/tofu.jpg" width="1920" height="1280" alt="Raw tofu arranged neatly in slices on a serving plater.">
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <footer>

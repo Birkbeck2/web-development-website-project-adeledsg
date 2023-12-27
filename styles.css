@@ -1,26 +1,31 @@
 /*Cascading CSS and Phone version*/
 
-*{ /*https://www.freecodecamp.org/news/html-page-width-height/#:~:text=If%20you%20set%20the%20width,width%20value%20on%20the%20body.*/
+*{ /**/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html {
+html { /*This tag is the root element of my webpage. 
+    I am specifying here the default styles for my entire webpage, 
+    cascading onto all the child elements.*/
     font-size: 16px;
     font-family: Arial, sans-serif;
     background-color: black;
     color: white;
 }
-body {
+body { /*I am applying these properties because I did not want a horizontal scrollbar. 
+    https://www.freecodecamp.org/news/html-page-width-height/#:~:text=If%20you%20set%20the%20width,width%20value%20on%20the%20bod.
+    */
     min-height: 100vh;
     width: 100%;
 }
 main{ 
     margin-top: 20%; /*margin top equivalent to heigh of the navbar so they dont overlap*/
-    padding-left: 10%; /*use of vw so it is responsive according to the viewport*/
+    padding-left: 10%;
     padding-right: 10%;
     margin-bottom: 5%;
     width: 100%;
+    min-height: 100vh;
 }
 
 /*Nav bar Styles*/
@@ -40,6 +45,8 @@ header {
     left: 0;
     right: 0;
     margin-top: 3%;
+    width: 100%;
+    height: auto;
 }
 .navbar ul {
     list-style-type: none;
@@ -72,12 +79,12 @@ header {
     display: flex;
     justify-content: end;
 }
-.breadcrumbs ul li{
+.breadcrumbs ul li {
     display: inline;
     list-style: none;
     text-decoration: none;
 }
-.breadcrumbs li a{ 
+.breadcrumbs li a { 
     text-decoration: none;
     color: white;
 }
@@ -97,9 +104,9 @@ header {
     background-color: white;
     color: black;
 }
-footer a:focus {
+.socials a:focus {
     outline: 2px solid white;
-    background-color: black;
+    background-color: white;
     color: black;
 }
 
@@ -116,31 +123,44 @@ footer {
     color: white;
     text-decoration: none;
 }
+footer h2 {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+h3{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
 footer hr {
     width: 100%;
 }
-.socials{
+.socials {
+    list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    list-style-type: none;
+    justify-content: center;
     width: 100%;
     padding: 0;
     margin-top: 3%;
     margin-bottom: 3%;
 }
-.socials img{
+.socials li{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 20%;
+    justify-content: center;
+}
+.socials a{
+    display: flex;
+    justify-content: center;
+}
+.socials img {
+    display: flex;
+    justify-content: center;
+    width: 25%;
     height: auto;
 }
 
 /*Landing page styles*/
-.grid-main{ /*using grid for the structure of the page*/
+.grid-main { /*using grid for the structure of the page*/
     position: relative;
     top: 0;
     display: grid;
@@ -151,17 +171,18 @@ footer hr {
     left: 0px;
     line-height: 0.9;
 }
-.larger{
-    font-size: 2em; /*Explain the use of em*/
+.title-container hr {
+    margin-top: 3%;
 }
-.smaller{
-    font-size: 1em;
+.larger {
+    font-size: 3.5em; /*Explain the use of em*/
 }
-.between{
-    font-size: 1.5em;
+.smaller {
+    font-size: 2em;
+    margin-left: 2%;
 }
-hr {
-    width: 100%;
+.between {
+    font-size: 2em;
 }
 .body-container {
     position: relative;
@@ -169,28 +190,44 @@ hr {
     margin-top: 3%;
 }
 .body-container p {
-    text-align: justify;
     line-height: 2;
-    font-size: 100%;
 }
 
 /*gallery pages styles*/
-.city-name{
+.city-name {
+    grid-row: 1;
     width: 100%;
+    font-size: 2em;
+    margin-bottom: 3%;
 }
-.flexbox-container{
+.flexbox-container {
+    grid-row: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
     width: 100%;
+    height: 100%;
 }
-.video-container{
+.video-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
     width: 100%;
+    height: 100%;
+}
+.video-container video{
+    width: 100%;    /* Make the video's width responsive to its container */
+    height: auto;   /* Maintain the aspect ratio */
+    max-width: 100%
+}
+.video-transcript h2 {
+    font-size: 1.5em;
+    margin-bottom: 3%;
+}
+.video-transcript p {
+    line-height: 2;
 }
 .image-container {
     display: flex;
@@ -198,10 +235,11 @@ hr {
     justify-content: center;
     gap: 10px;
     width: 100%;
+    height: 100%;
 }
-.image-container img{
+.image-container img {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 /*Contact form style https://blog.logrocket.com/how-to-style-forms-with-css-a-beginners-guide/*/
@@ -223,25 +261,27 @@ form {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    font-family: inherit;
 }
 .form-section input{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    padding:10px;
-    margin:10px 0;
-    border-radius:10px;
-
+    padding: 2%;
+    margin: 2% 0;
+    border-radius: 10px;
+    font-family: inherit;
 }
 .form-section textarea{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    padding:10px;
-    margin:10px 0;
-    border-radius:10px;
+    padding: 2%;
+    margin: 2% 0;
+    border-radius: 10px;
+    font-family: inherit;
 }
 .button {
     display: flex;
@@ -251,10 +291,10 @@ form {
     align-items: center;
     width: 100%;
 }
-button{
-    padding:10px;
-    margin:10px 0;
-    border-radius:10px;
+button {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
 }
 
 @media screen and (min-width:601px) and (max-width:900px){ /* Adding Media Query for Ipad accessibility reasons?*/
@@ -288,78 +328,62 @@ button{
 /*gallery pages styles iPad*/
 .grid-second{
     display: grid;
-    grid-template-rows: 0.5fr 3fr;
+    grid-template-rows: auto auto;
+    row-gap: 2%;
     text-align: center;
-    justify-content: center;
-    align-items: center;
 }
 .city-name{
-    grid-row: 1;
     text-align: center;
 }
 .flexbox-container {
+    grid-row: 2;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
+    flex-direction: column;
 }
 .video-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     width: 100%;
 }
 .image-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     width: 100%;
 }
 .video-container video {
-    width: 82%;
-    height: 100%;
+    width: 95%;
+}
+.video-transcript {
+    width: 95%;
 }
 .image-container img{
-    width: 40%;
-    height: 10em;
+    width: 47%;
+    height: auto;
 }
 
-/*Footer Styles on iPad*/
-footer {
-    position: fixed;
-    width: auto;
-    background-color: black;
-    margin-top: 2%;
-}
-footer hr {
-    width: 100%;
-}
-.socials{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    list-style-type: none;
-    width: 100%;
-    padding: 0;
-    margin-bottom: 3%;
-}
-.socials img{
-    width: 20%;
-    height: auto;
+/*footer styles iPad*/
+footer h3 {
+    text-align: center;
 }
 }
 
 @media screen and (min-width:901px) { /* Adding Media Query for laptop accessibility reasons?*/
 
-/*Landing page styles laptop*/
-.grid-main{
+/*Nav bar Styles*/
+header {
+    height: 20%;
+}
+.navbar a {
+    font-size: 1.5em;
+}
+.breadcrumbs li {
+    font-size: 1.5em;
+}
+
+/*Landing page styles*/
+.grid-main {
     position: relative;
     top: 0;
     display: grid;
@@ -379,33 +403,19 @@ footer hr {
     margin-top: 3%;
 }
 .body-container p {
-    text-align: justify;
+    font-size: 1.5em;
     line-height: 1.7;
 }
 
-/*Footer Styles laptop*/
+/*Footer Styles*/
 footer {
     position: fixed;
     width: auto;
     background-color: black;
     margin-top: 2%;
 }
-footer hr {
-    width: 100%;
-}
-.socials{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    list-style-type: none;
-    width: 100%;
-    padding: 0;
-    margin-bottom: 3%;
-}
-.socials img{
-    width: 20%;
-    height: auto;
+.socials img {
+    width: 10%;
 }
 
 /*gallery pages styles*/
@@ -429,21 +439,61 @@ footer hr {
 .video-container{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     width: 45%;
 }
 .image-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 45%;
+    width: 50%;
 }
 .video-container video{
     width: 100%;
     height: auto;
 }
-.image-container img{
-    width: 40%;
+.video-transcript {
+    line-height: 1.7;
+    width: 100%;
     height: auto;
+}
+.image-container img{
+    width: 45%;
+    height: auto;
+}
+
+/*Contact form styles*/
+.grid-contact {
+    display: grid;
+    grid-template-rows: auto auto;
+}
+form {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    row-gap: 3%;
+    column-gap: 3%;
+}
+.form-section label {
+    font-size: 1.2em;
+}
+.form-section input{
+    padding: 5%;
+    margin: 5% 0;
+    border-radius: 15px;
+}
+.form-section textarea{
+    padding: 5%;
+    margin: 5% 0;
+    border-radius: 15px;
+}
+button {
+    padding: 3%;
+    margin: 3% 0;
+    border-radius: 15px;
+}
+.button{
+    justify-content: left;
 }
 
 }
