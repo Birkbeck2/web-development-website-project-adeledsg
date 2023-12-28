@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en"> <!--specifying language as english, understandable-->
 
 <head>
-    <meta charset="utf-8">
-    <title>Food Travel Blog</title>
-    <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"> <!--specifying character encoding-->
+    <title>Feast and Wonder</title>
+    <link rel="stylesheet" href="styles.css"> <!--defines a default stylesheet and its source-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--setting the width of the page to follow the width of the viewport, with an inital zoom level of 1-->
 </head>
 
 <body>
-    <header>
+    <header> <!--using semantic html to create 3 distinct blocs: header, main, and footer-->
+        <div class="skip-to-main">
+            <a href="#main">Skip to main content</a>
+        </div>
+
         <nav class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -22,9 +26,9 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main"> <!--Attributing an id to target it in CSS and also to allow skip to main to work-->
 
-        <section class="grid-main">
+        <section class="grid-main"> <!--creating a section to apply grid in css for the layout of the page-->
             <div class="title-container">
                 <h1><span class="larger">Feast</span><br><span class="between">&</span><span class="smaller">Wonder</span></h1>
                 <hr>
@@ -45,11 +49,11 @@
     <footer>
             <h2>Want to see more?</h3>
             <hr>
-                <ul class="socials">
-                    <li><a href="http://www.example.org"><img src="images/instagram-icon.png" width="512" height="512" alt="Instagram icon"></a></li>
-                    <li><a href="http://www.example.org"><img src="images/facebook-icon.png" width="512" height="512" alt="Facebook icon"></a></li>
-                    <li><a href="http://www.example.org"><img src="images/pinterest-icon.png" width="512" height="512" alt="Pinterest icon"></a></li>
-                </ul>
+            <ul class="socials">
+                <li><a href="http://www.example.org"><img src="images/instagram-icon.png" width="512" height="512" alt="Instagram icon"></a></li>
+                <li><a href="http://www.example.org"><img src="images/facebook-icon.png" width="512" height="512" alt="Facebook icon"></a></li>
+                <li><a href="http://www.example.org"><img src="images/pinterest-icon.png" width="512" height="512" alt="Pinterest icon"></a></li>
+            </ul>
     </footer>
 </body>
 

@@ -4,13 +4,17 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Food Travel Blog</title>
+    <title>Feast and Wonder</title>
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <header>
+        <div class="skip-to-main">
+            <a href="#main">Skip to main content</a>
+        </div>
+        
         <nav class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -21,7 +25,7 @@
             </ul>
         </nav>
 
-        <nav class="breadcrumbs"> <!--Installing breadcrumbs for usability and accessibility purposes. Screen reader reads outloud the breadcrumb and the nav tag gives semantic context. Need to add Aria label.-->
+        <nav class="breadcrumbs"> <!--installing breadcrumbs for usability and accessibility purposes.-->
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li>Paris</li>
@@ -29,26 +33,26 @@
         </nav>
     </header>
 
-    <main>
-        <section class="grid-second">
+    <main id="main">
+        <section class="grid-second"><!--creating section for the layout of the page-->
             <h1 class="city-name">Paris</h1>
 
-            <div class="flexbox-container"> <!--Justify here why flexbox and not grid-->
+            <div class="flexbox-container"> <!--creating a div to apply flexbex layout in css-->
     
-                <div class="video-container"> <!--Source W3C, make sure it meets accessibility criteria, have alt, height, width-->
-                    <video width="1280" height="720" src="images/Croissant.mp4" controls></video>
+                <div class="video-container">
+                    <video width="1280" height="720" src="images/Croissant.mp4" controls></video> <!--followed https://www.w3schools.com/tags/tag_video.asp to add video content. Added width and height to indicate loading space to the browser-->
 
-                    <article class="video-transcript">
-                        <h2>Fresh out of the oven</h2>
-                        <p>You found yourself roaming in when usthe street of Paris and enter a bakery.
-                        The baker just finished a fresh load of croissants and pains au chocolat.
-                        Standing next to him, you can smell the aroms of their work, hear the flakes crisp.
+                    <article class="video-transcript" aria-labelledby="video-transcript"> <!--Adding a video transcript for the video and an aria label so it can be identified as such-->
+                        <h2 id="video-transcript">At the bakery</h2>
+                        <p>This short slow-motion video pans over freshly baked croissants and pains au chocolat. 
+                            Known as viennoiserie, these pastries are a staple in every French bakery -boulangerie- and
+                            are commonly enjoyed for breakfast with a cup of strong coffee. 
                         </p>
                     </article>
                 </div>
     
                 <div class="image-container"> 
-                    <img src="images/macarons.jpg" width="1920" height="1280" alt="A selection of macarons in bright and loud colours.">
+                    <img src="images/macarons.jpg" width="1920" height="1280" alt="A selection of macarons in bright and loud colours."> <!--specifying width and height to indicate loading space and alt text for accessibility-->
                     <img src="images/croissant.jpg" width="1920" height="1280" alt="Close up picture of croissants, coated in sugar, fresh out of the oven.">
                     <img src="images/charcuterie.jpg" width="1920" height="1280" alt="Charcuterie and cheese board accompanied by fresh cherry tomatoes and sliced cucumber, and a bottle of white wine.">
                     <img src="images/cheese-board.jpg" width="1920" height="1440" alt="A buffet display of bread rolls, cheese, and chutney accompanied by fresh grapes, apples, and pears.">

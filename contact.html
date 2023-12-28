@@ -4,13 +4,17 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Food Travel Blog</title>
+    <title>Feast and Wonder</title>
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <header>
+        <div class="skip-to-main">
+            <a href="#main">Skip to main content</a>
+        </div>
+        
         <nav class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -29,12 +33,12 @@
         </nav>
     </header>
 
-    <main>
-        <section class="grid-contact">
+    <main id="main">
+        <section class="grid-contact"> <!--For the layout of the page-->
             <h1 class="city-name">Contact me</h1>
 
-            <form method="post">
-                <div class="form-section" aria-labelledby="first-name">
+            <form method="post"> <!--setting the request method for the browser to use-->
+                <div class="form-section" aria-labelledby="first-name"> <!--Adding aria label to associate text with form input for screen reader users-->
                     <label for="first-name">Name</label>
                     <input id="first-name" name="first-name" type="text" placeholder="Enter your first name">
                 </div>
@@ -51,7 +55,7 @@
                     <textarea id="message" name="message" placeholder="Enter your message"></textarea>
                 </div>
                 <div class="button">
-                    <button aria-label="submit form" type="submit">Send</button>
+                    <button aria-label="submit form" type="submit">Submit</button>
                 </div>
             </form>
         </section>

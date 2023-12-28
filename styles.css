@@ -1,63 +1,64 @@
 /*Cascading CSS and Phone version*/
 
-*{ /**/
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{ /*resetting - Applied the following properties from https://www.freecodecamp.org/news/html-page-width-height/#:~:text=If%20you%20set%20the%20width,width%20value%20on%20the%20body. To avoid a horizontal scrollbar, and body to be 100% of the viewport, default margins removed.*/
+    margin: 0; /*removing all default margins*/
+    padding: 0; /*removing all default paddings*/
+    box-sizing: border-box; /*Including width and height of padding and border when calculating the element's width and height.*/
 }
-html { /*This tag is the root element of my webpage. 
-    I am specifying here the default styles for my entire webpage, 
-    cascading onto all the child elements.*/
-    font-size: 16px;
-    font-family: Arial, sans-serif;
-    background-color: black;
+html { /*root element of my webpage. Specifying here the default styles for my entire webpage, cascading onto the child elements.*/
+    font-size: 16px; 
+    font-family: Arial, Helvetica, sans-serif; 
+    background-color: black; 
     color: white;
 }
-body { /*I am applying these properties because I did not want a horizontal scrollbar. 
-    https://www.freecodecamp.org/news/html-page-width-height/#:~:text=If%20you%20set%20the%20width,width%20value%20on%20the%20bod.
-    */
+body { /*targetting body so that the width is that of the viewport and height is at least that of the viewport*/
     min-height: 100vh;
-    width: 100%;
+    width: 100%; 
 }
-main{ 
-    margin-top: 20%; /*margin top equivalent to heigh of the navbar so they dont overlap*/
+#main{ /*targetting element that has this id*/
+    margin-top: 20%; 
     padding-left: 10%;
     padding-right: 10%;
-    margin-bottom: 5%;
+    margin-bottom: 5%; 
     width: 100%;
-    min-height: 100vh;
+    min-height: 100vh;/**/
+}
+
+/*Skip to main content styles*/
+.skip-to-main a { /*targetting a tag in element classified as skip to main*/
+    position: absolute;
+    top: -500px; /*placing the element 500px above the viewport hidding it from view but accessible via keyboard*/
+    left: 0;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+.skip-to-main a:focus { /*targetting a tag in element classified as skip to main when focused*/
+    top: 0;
 }
 
 /*Nav bar Styles*/
 header {
-    position: fixed;
-    left: 0;
-    right: 0;
+    position: fixed; /*Applying this property so that my header does not move when the user scrolls vertically*/
+    left: 0; /*aligning header to the left of the viewport*/
+    right: 0; 
     top: 0;
-    height: 11%;
-    z-index: 1;
-    background-color: black;
-    padding-left: 10%;
+    height: 11%; 
+    z-index: 1; /*Giving a stacking order that is more than 0 so that my header appears on top of any other content*/
+    background-color: black; 
+    padding-left: 10%; 
     padding-right: 10%;
 }
 .navbar {
-    position: relative;
-    left: 0;
-    right: 0;
-    margin-top: 3%;
+    margin-top: 3%; 
     width: 100%;
     height: auto;
 }
 .navbar ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
-    padding: 0;
-}
-.navbar ul li {
-    display: inline;
+    list-style-type: none; 
+    display: flex; /*applying flexbox to ul element*/
+    justify-content: space-between; /*distributing the child elements li evenly within ul*/
 }
 .navbar a {
     text-decoration: none;
@@ -66,20 +67,19 @@ header {
 }
 
 /*Breadcrumbs Styles*/
-.breadcrumbs{
+.breadcrumbs{ /*targetting elements classified as breadcrumbs*/
     display: flex;
     position: fixed;
     right: 0;
     line-height: 0.05;
-    background-color: black;
     margin-top: 3%;
     margin-right: 10%;
 }
-.breadcrumbs ul {
+.breadcrumbs ul { /*targetting ul tag in elements classified as breadcrumbs*/
     display: flex;
     justify-content: end;
 }
-.breadcrumbs ul li {
+.breadcrumbs ul li { 
     display: inline;
     list-style: none;
     text-decoration: none;
@@ -88,13 +88,19 @@ header {
     text-decoration: none;
     color: white;
 }
-.breadcrumbs li+li::before {
+.breadcrumbs li+li::before { 
     color: white; 
     content: "/\00a0 ";
 }
 
+/*Hover Styles*/
+nav a:hover { /*targetting a tag in nav tags, using a pseudo-class to change the appearance of the a tag when the user hovers over it*/
+    padding-bottom: 1%;
+    border-bottom-style: solid;
+}
+
 /* Focus Styles for accessibility*/
-.navbar a:focus {
+.navbar a:focus { /*targetting a tag in my elements classified as navbar, using a pseudo-class to change the appearance of the a tag when the user focuses on it over it*/
     outline: 2px solid white;
     background-color: white;
     color: black;
@@ -104,14 +110,14 @@ header {
     background-color: white;
     color: black;
 }
-.socials a:focus {
+.socials a:focus { 
     outline: 2px solid white;
     background-color: white;
     color: black;
 }
 
 /*Footer Styles*/
-footer {
+footer { 
     position: relative;
     bottom: 0;
     left: 0;
@@ -120,21 +126,20 @@ footer {
     padding-right: 10%;
     padding-left: 10%;
     width: 100%;
-    color: white;
     text-decoration: none;
 }
-footer h2 {
+footer h2 { 
     margin-top: 2%;
     margin-bottom: 2%;
 }
-h3{
+h3{ 
     margin-top: 2%;
     margin-bottom: 2%;
 }
-footer hr {
+footer hr { 
     width: 100%;
 }
-.socials {
+.socials { 
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -160,123 +165,100 @@ footer hr {
 }
 
 /*Landing page styles*/
-.grid-main { /*using grid for the structure of the page*/
-    position: relative;
-    top: 0;
-    display: grid;
-    grid-template-rows: 0.8fr 2fr; /*separating title h1 and body text*/
+.grid-main { 
+    display: grid; /*Using grid to structure the page*/
+    grid-template-rows: auto auto; /*Separating title and text*/
+    row-gap: 3%;
 }
 .title-container {
     position: relative;
-    left: 0px;
-    line-height: 0.9;
+    left: 0; /*Assuring the title is on the left of the page*/
+    line-height: 0.9; /*Reducing line height for the title*/
 }
 .title-container hr {
-    margin-top: 3%;
+    margin-top: 3%; 
 }
 .larger {
-    font-size: 3.5em; /*Explain the use of em*/
+    font-size: 3.5rem; /*Making the font size 3.5 bigger than the one set up in the html tag*/
 }
 .smaller {
-    font-size: 2em;
+    font-size: 2rem;
     margin-left: 2%;
 }
 .between {
-    font-size: 2em;
-}
-.body-container {
-    position: relative;
-    top: 0;
-    margin-top: 3%;
+    font-size: 2rem;
 }
 .body-container p {
-    line-height: 2;
+    line-height: 2; /*Doubling line height to increase readability*/
 }
 
-/*gallery pages styles*/
+/*Gallery pages styles*/
 .city-name {
-    grid-row: 1;
-    width: 100%;
-    font-size: 2em;
+    font-size: 2rem;
     margin-bottom: 3%;
 }
 .flexbox-container {
-    grid-row: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-    height: 100%;
+    display: flex; /*Creating flexible responsive layout*/
+    flex-direction: column; /*Stacking video-container and image-container vertically*/
+    width: 100%; 
+    height: auto; /*Maintaining the aspect ratio*/
+    gap: 10px; /*Adding space between video-conatiner and image-container*/
 }
 .video-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
+    display: flex; /*Applying flex to the child element*/
+    flex-direction: column; 
+    gap: 10px; 
     width: 100%;
-    height: 100%;
+    height: auto;
+}
+.video-transcript {
+    width: 100%;
+    height: auto;
 }
 .video-container video{
-    width: 100%;    /* Make the video's width responsive to its container */
-    height: auto;   /* Maintain the aspect ratio */
-    max-width: 100%
+    width: 100%;
+    height: auto;
 }
 .video-transcript h2 {
-    font-size: 1.5em;
-    margin-bottom: 3%;
+    font-size: 1.5rem;
+    margin-bottom: 3%; 
 }
 .video-transcript p {
-    line-height: 2;
+    line-height: 2; 
 }
 .image-container {
-    display: flex;
+    display: flex; /*Applying flexbox to the child element*/
     flex-direction: column;
-    justify-content: center;
-    gap: 10px;
+    gap: 10px; 
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 .image-container img {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
-/*Contact form style https://blog.logrocket.com/how-to-style-forms-with-css-a-beginners-guide/*/
+/*Contact form style*/
 form {
-    display: flex;
-    flex-direction: row;
+    display: flex; /*Creating flexbox layout for the contact form*/
+    flex-direction: row; 
     flex-wrap: wrap;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding-left: 10%;
+    padding-right: 10%; 
 }
-.form-section{
-    display: flex;
+.form-section {
+    display: flex; 
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-}
-.form-section label {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    font-family: inherit;
 }
 .form-section input{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     width: 100%;
     padding: 2%;
     margin: 2% 0;
     border-radius: 10px;
-    font-family: inherit;
 }
 .form-section textarea{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     width: 100%;
     padding: 2%;
     margin: 2% 0;
@@ -288,7 +270,6 @@ form {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     width: 100%;
 }
 button {
@@ -297,9 +278,9 @@ button {
     border-radius: 10px;
 }
 
-@media screen and (min-width:601px) and (max-width:900px){ /* Adding Media Query for Ipad accessibility reasons?*/
+@media screen and (min-width:601px) and (max-width:900px){ /*Adding Media Query*/
 
-/*Landing page styles iPad*/
+/*Landing page*/
 .grid-main{
     position: relative;
     top: 0;
@@ -321,11 +302,10 @@ button {
     margin-top: 3%;
 }
 .body-container p {
-    text-align: justify;
     line-height: 1.7;
 }
 
-/*gallery pages styles iPad*/
+/*gallery pages styles*/
 .grid-second{
     display: grid;
     grid-template-rows: auto auto;
@@ -359,27 +339,27 @@ button {
     width: 95%;
 }
 .image-container img{
-    width: 47%;
+    width: 47%; /*modified number until wanted effect was reached*/
     height: auto;
 }
 
-/*footer styles iPad*/
+/*footer styles*/
 footer h3 {
     text-align: center;
 }
 }
 
-@media screen and (min-width:901px) { /* Adding Media Query for laptop accessibility reasons?*/
+@media screen and (min-width:901px) { /*Adding Media Query*/
 
 /*Nav bar Styles*/
 header {
-    height: 20%;
+    height: 15%;
 }
 .navbar a {
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 .breadcrumbs li {
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 /*Landing page styles*/
@@ -403,7 +383,7 @@ header {
     margin-top: 3%;
 }
 .body-container p {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     line-height: 1.7;
 }
 
@@ -425,7 +405,6 @@ footer {
     text-align: center;
 }
 .city-name{
-    grid-row: 1;
     text-align: center;
     margin-bottom: 3%;
 }
@@ -475,7 +454,7 @@ form {
     column-gap: 3%;
 }
 .form-section label {
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 .form-section input{
     padding: 5%;

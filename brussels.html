@@ -4,13 +4,17 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Food Travel Blog</title>
+    <title>Feast and Wonder</title>
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <header>
+        <div class="skip-to-main">
+            <a href="#main">Skip to main content</a>
+        </div>
+        
         <nav class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -30,7 +34,7 @@
 
     </header>
 
-    <main>
+    <main id="main">
         <section class="grid-second">
             <h1 class="city-name">Brussels</h1>
 
@@ -39,10 +43,11 @@
                 <div class="video-container"> <!--Source W3C, make sure it meets accessibility criteria, have alt, height, width-->
                     <video width="1280" height="720" src="images/chocolate.mp4" controls></video>
 
-                    <article class="video-transcript">
-                        <h2>At the chocolate shop in Brussels</h2>
-                        <p>It's christmas and you have decided to buy some chocolates for your firends and family.
-                        While the own attends other customers, you can sense the chocolate aromas in the air.
+                    <article class="video-transcript" aria-labelledby="video-transcript">
+                        <h2 id="video-transcript">At the chocolate shop</h2>
+                        <p>This short video shows a rotating pile of filled chocolates in a local chocolate shop -known as a chocolaterie.
+                            Shaped in the form of seashells, made from a mix of white and dark chocolate, and filled with praline -a nut and sugar paste- these
+                            chocolates are emblematic of Belgian chocolate.
                         </p>
                     </article>
                 </div>

@@ -4,13 +4,17 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Food Travel Blog</title>
+    <title>Feast and Wonder</title>
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <header>
+        <div class="skip-to-main">
+            <a href="#main">Skip to main content</a>
+        </div>
+        
         <nav class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -29,7 +33,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main">
         <section class="grid-second">
             <h1 class="city-name">Seoul</h1>
 
@@ -38,12 +42,11 @@
                 <div class="video-container"> <!--Source W3C, make sure it meets accessibility criteria, have alt, height, width-->
                     <video width="1920" height="1080" src="images/Seoul.mp4" controls></video> <!--https://www.w3schools.com/tags/att_video_width.asp-->
 
-                    <article class="video-transcript">
-                        <h2>In the street of Seoul</h2>
-                        <p>You are walking in Seoul at night. The streets are in turmoil. 
-                        You stand next to a food truck where the owners serve the rushed customers.
-                        While you are calming standing, the busy lives of people unfoled in front of you,
-                        yet still rythmed by the street food of Seoul.
+                    <article class="video-transcript" aria-labelledby="video-transcript"> 
+                        <h2 id="video-transcript">In the street of Seoul</h2>
+                        <p>This short time-lapse video is set at night in a busy street in downtown Seoul and shows a street food stalls
+                            serving korean pancakes to passerbyers. It illustrates an important aspect of korean food culture:
+                            the simple but flavoursome cuisine made and sold by street vendors. 
                         </p>
                     </article>
                 </div>
