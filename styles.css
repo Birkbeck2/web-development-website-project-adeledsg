@@ -1,217 +1,229 @@
-/*Phone version styles*/
+/*Cascading CSS and Phone version*/
 
-/*Styles for all pages*/
-body {
+*{ /*https://www.freecodecamp.org/news/html-page-width-height/#:~:text=If%20you%20set%20the%20width,width%20value%20on%20the%20body.*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 16px;
     font-family: Arial, sans-serif;
     background-color: black;
     color: white;
 }
-
-main{ /*code so that jsut the nav bar is fixed for the phone but not footer*/
-    margin-top: 90px; /*This is here so that the main content does not overlap with the navigation bar, equivalent to the height of the navbar*/
+body {
+    min-height: 100vh;
+    width: 100%;
+}
+main{ 
+    margin-top: 20%; /*margin top equivalent to heigh of the navbar so they dont overlap*/
+    padding-left: 10%; /*use of vw so it is responsive according to the viewport*/
+    padding-right: 10%;
+    margin-bottom: 5%;
+    width: 100%;
 }
 
 /*Nav bar Styles*/
 header {
     position: fixed;
+    left: 0;
+    right: 0;
     top: 0;
-    width: 100%;
-    height: 90px;
-    z-index: 1000;
+    height: 11%;
+    z-index: 1;
     background-color: black;
+    padding-left: 10%;
+    padding-right: 10%;
 }
-
+.navbar {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-top: 3%;
+}
 .navbar ul {
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding-left: 5%;
-    padding-right: 5%;
+    background-color: black;
+    padding: 0;
 }
-
 .navbar ul li {
     display: inline;
 }
-
 .navbar a {
     text-decoration: none;
     color: white;
     font-weight: bold;
 }
 
-/* Focus Styles */
-.navbar a:focus {
-    outline: 2px solid white;
-    background-color: white;
-    color: black;
-}
-
-.breadcrumbs a:focus {
-    outline: 2px solid white;
-    background-color: white;
-    color: black;
-}
-
-/* Breadcrumbs Styles */
+/*Breadcrumbs Styles*/
 .breadcrumbs{
     display: flex;
     position: fixed;
     right: 0;
     line-height: 0.05;
-    padding-right: 5%;
+    background-color: black;
+    margin-top: 3%;
+    margin-right: 10%;
 }
-
 .breadcrumbs ul {
     display: flex;
     justify-content: end;
-
 }
-
 .breadcrumbs ul li{
     display: inline;
     list-style: none;
     text-decoration: none;
 }
-
 .breadcrumbs li a{ 
     text-decoration: none;
     color: white;
 }
-
 .breadcrumbs li+li::before {
     color: white; 
     content: "/\00a0 ";
 }
 
-/*Home page styles*/
-.grid-main{
-    position: relative;
-    top: 0;
-    display: grid;
-    grid-template-rows: 1fr 2fr;
-    padding-right: 5%;
-    padding-left: 5%;
+/* Focus Styles for accessibility*/
+.navbar a:focus {
+    outline: 2px solid white;
+    background-color: white;
+    color: black;
 }
-
-.title-container {
-    position: relative;
-    left: 0px;
-    line-height: 0.9;
+.breadcrumbs a:focus {
+    outline: 2px solid white;
+    background-color: white;
+    color: black;
 }
-
-.larger{
-    font-size: 2em; /*Explain the use of em*/
-}
-
-.smaller{
-    font-size: 1em;
-}
-
-.between{
-    font-size: 1.5em;
-    margin-right: 15px;
-}
-
-hr {
-    width: 100%;
-}
-
-.body-container {
-    position: relative;
-    top: 0;
-    
-}
-
-.body-container p {
-    text-align: justify;
-    line-height: 2;
-    font-size: 100%;
-}
-
-/*Footer Styles*/
-footer {
-    position: relative;
-    bottom: 0;
-    z-index: 1000;
-    color: white;
-    padding-right: 5%;
-    padding-left: 5%;
-    text-decoration: none;
-}
-
-footer hr {
-    width: 100%;
-}
-
-.socials{
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    list-style-type: none;
-    padding: 0;
-}
-
 footer a:focus {
     outline: 2px solid white;
     background-color: black;
     color: black;
 }
 
-/*Styles for h1 titles (except home page)*/
+/*Footer Styles*/
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding-right: 10%;
+    padding-left: 10%;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+}
+footer hr {
+    width: 100%;
+}
+.socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+.socials img{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    height: auto;
+}
 
-.city-name{
-    padding-left: 5%;
+/*Landing page styles*/
+.grid-main{ /*using grid for the structure of the page*/
+    position: relative;
+    top: 0;
+    display: grid;
+    grid-template-rows: 0.8fr 2fr; /*separating title h1 and body text*/
+}
+.title-container {
+    position: relative;
+    left: 0px;
+    line-height: 0.9;
+}
+.larger{
+    font-size: 2em; /*Explain the use of em*/
+}
+.smaller{
+    font-size: 1em;
+}
+.between{
+    font-size: 1.5em;
+}
+hr {
+    width: 100%;
+}
+.body-container {
+    position: relative;
+    top: 0;
+    margin-top: 3%;
+}
+.body-container p {
+    text-align: justify;
+    line-height: 2;
+    font-size: 100%;
 }
 
 /*gallery pages styles*/
+.city-name{
+    width: 100%;
+}
 .flexbox-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    padding-left: 5%;
-    padding-right: 5%;
+    width: 100%;
 }
-
 .video-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+    width: 100%;
 }
-
 .image-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+    width: 100%;
+}
+.image-container img{
+    width: 100%;
+    height: auto;
 }
 
 /*Contact form style https://blog.logrocket.com/how-to-style-forms-with-css-a-beginners-guide/*/
-
 form {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-right: 5%;
-    margin-left: 5%;
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
-
 .form-section{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
 }
-
 .form-section label {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
 }
-
 .form-section input{
     display: flex;
     flex-direction: row;
@@ -222,7 +234,6 @@ form {
     border-radius:10px;
 
 }
-
 .form-section textarea{
     display: flex;
     flex-direction: row;
@@ -232,7 +243,6 @@ form {
     margin:10px 0;
     border-radius:10px;
 }
-
 .button {
     display: flex;
     flex-direction: row;
@@ -241,7 +251,6 @@ form {
     align-items: center;
     width: 100%;
 }
-
 button{
     padding:10px;
     margin:10px 0;
@@ -250,9 +259,191 @@ button{
 
 @media screen and (min-width:601px) and (max-width:900px){ /* Adding Media Query for Ipad accessibility reasons?*/
 
+/*Landing page styles iPad*/
+.grid-main{
+    position: relative;
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 0.5fr 1fr;
+}
+.title-container {
+    grid-row: 1;
+    grid-column: 1;
+    position: relative;
+    left: 0px;
+    line-height: 0.9;
+}
+.body-container {
+    grid-row: 2;
+    grid-column: 2;
+    width: 100%;
+    margin-top: 3%;
+}
+.body-container p {
+    text-align: justify;
+    line-height: 1.7;
+}
 
+/*gallery pages styles iPad*/
+.grid-second{
+    display: grid;
+    grid-template-rows: 0.5fr 3fr;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.city-name{
+    grid-row: 1;
+    text-align: center;
+}
+.flexbox-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.video-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.image-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.video-container video {
+    width: 82%;
+    height: 100%;
+}
+.image-container img{
+    width: 40%;
+    height: 10em;
+}
+
+/*Footer Styles on iPad*/
+footer {
+    position: fixed;
+    width: auto;
+    background-color: black;
+    margin-top: 2%;
+}
+footer hr {
+    width: 100%;
+}
+.socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 3%;
+}
+.socials img{
+    width: 20%;
+    height: auto;
+}
 }
 
 @media screen and (min-width:901px) { /* Adding Media Query for laptop accessibility reasons?*/
+
+/*Landing page styles laptop*/
+.grid-main{
+    position: relative;
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 0.5fr 1fr;
+}
+.title-container {
+    grid-row: 1;
+    grid-column: 1;
+    position: relative;
+    left: 0px;
+    line-height: 0.9;
+}
+.body-container {
+    grid-row: 2;
+    grid-column: 2;
+    margin-top: 3%;
+}
+.body-container p {
+    text-align: justify;
+    line-height: 1.7;
 }
 
+/*Footer Styles laptop*/
+footer {
+    position: fixed;
+    width: auto;
+    background-color: black;
+    margin-top: 2%;
+}
+footer hr {
+    width: 100%;
+}
+.socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 3%;
+}
+.socials img{
+    width: 20%;
+    height: auto;
+}
+
+/*gallery pages styles*/
+.grid-second{
+    display: grid;
+    grid-template-rows: 0.5fr;
+    text-align: center;
+}
+.city-name{
+    grid-row: 1;
+    text-align: center;
+    margin-bottom: 3%;
+}
+.flexbox-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+.video-container{
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+}
+.image-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 45%;
+}
+.video-container video{
+    width: 100%;
+    height: auto;
+}
+.image-container img{
+    width: 40%;
+    height: auto;
+}
+
+}
