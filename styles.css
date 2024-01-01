@@ -21,7 +21,7 @@ body { /*targetting body so that the width is that of the viewport and height is
     padding-right: 10%;
     margin-bottom: 5%; 
     width: 100%;
-    min-height: 100vh;/**/
+    min-height: 100vh;
 }
 
 /*Skip to main content styles*/
@@ -112,8 +112,6 @@ nav a:hover { /*targetting a tag in nav tags, using a pseudo-class to change the
 }
 .socials a:focus { 
     outline: 2px solid white;
-    background-color: white;
-    color: black;
 }
 
 /*Footer Styles*/
@@ -159,9 +157,20 @@ footer hr {
 }
 .socials img {
     display: flex;
-    justify-content: center;
-    width: 25%;
+    width: 100%;
     height: auto;
+}
+.attribution {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    align-content: center;
+}
+.attribution a {
+    color: white;
+    padding-right: 0.9%;
+    padding-left: 0.9%;
 }
 
 /*Landing page styles*/
@@ -280,6 +289,18 @@ button {
 
 @media screen and (min-width:601px) and (max-width:900px){ /*Adding Media Query*/
 
+/*footer styles*/
+footer h3 {
+    text-align: center;
+}
+.socials img {
+    width: 90%;
+    height: auto;
+}
+.attribution {
+    font-size: 0.8rem;
+}
+
 /*Landing page*/
 .grid-main{
     position: relative;
@@ -342,24 +363,37 @@ button {
     width: 47%; /*modified number until wanted effect was reached*/
     height: auto;
 }
-
-/*footer styles*/
-footer h3 {
-    text-align: center;
-}
 }
 
 @media screen and (min-width:901px) { /*Adding Media Query*/
 
 /*Nav bar Styles*/
 header {
-    height: 15%;
+    height: 17%;
 }
 .navbar a {
     font-size: 1.5rem;
 }
 .breadcrumbs li {
     font-size: 1.5rem;
+}
+
+/*Footer Styles*/
+footer {
+    position: fixed;
+    width: auto;
+    background-color: black;
+    margin-top: 2%;
+}
+.socials {
+    gap: 50px;
+}
+.socials img {
+    width: 50%;
+    height: auto;
+}
+.attribution {
+    font-size: 0.9rem;
 }
 
 /*Landing page styles*/
@@ -385,17 +419,6 @@ header {
 .body-container p {
     font-size: 1.5rem;
     line-height: 1.7;
-}
-
-/*Footer Styles*/
-footer {
-    position: fixed;
-    width: auto;
-    background-color: black;
-    margin-top: 2%;
-}
-.socials img {
-    width: 10%;
 }
 
 /*gallery pages styles*/

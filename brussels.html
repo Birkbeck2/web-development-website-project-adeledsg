@@ -25,7 +25,7 @@
             </ul>
         </nav>
 
-        <nav class="breadcrumbs"> <!--Installing breadcrumbs for usability and accessibility purposes. Screen reader reads outloud the breadcrumb and the nav tag gives semantic context. Need to add Aria label.-->
+        <nav class="breadcrumbs"> <!--Installing breadcrumbs for usability and accessibility purposes.-->
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li>Brussels</li>
@@ -38,12 +38,12 @@
         <section class="grid-second">
             <h1 class="city-name">Brussels</h1>
 
-            <div class="flexbox-container"> <!--Justify here why flexbox and not grid-->
+            <div class="flexbox-container"> <!--Creating a div to style the layout in css-->
 
-                <div class="video-container"> <!--Source W3C, make sure it meets accessibility criteria, have alt, height, width-->
-                    <video width="1280" height="720" src="images/chocolate.mp4" controls></video>
+                <div class="video-container">
+                    <video width="1280" height="720" src="images/chocolate.mp4" controls></video> <!--Source:https://www.w3schools.com/tags/tag_video.asp-->
 
-                    <article class="video-transcript" aria-labelledby="video-transcript">
+                    <article class="video-transcript" aria-labelledby="video-transcript"> <!--further comments on accessibility in the report-->
                         <h2 id="video-transcript">At the chocolate shop</h2>
                         <p>This short video shows a rotating pile of filled chocolates in a local chocolate shop -known as a chocolaterie.
                             Shaped in the form of seashells, made from a mix of white and dark chocolate, and filled with praline -a nut and sugar paste- these
@@ -52,7 +52,7 @@
                     </article>
                 </div>
 
-                <div class="image-container"> <!--make sure all images have have width, height, alt-->
+                <div class="image-container"> <!--providing width and height for loading space and alt text for accessibility-->
                     <img src="images/waffles.jpg" width="1920" height="1173" alt="Freshly made waffles in the shape of a heart pictured with a bowl of flour, two eggs and a whisk.">
                     <img src="images/christmas-cookies.jpg" width="1920" height="1146" alt="Star shaped spiced cinnamon christmas cookies surrounded by pine cones, whole walnuts in their shell, and cinnamon sticks.">
                     <img src="images/chocolate.jpg" width="1920" height="1275" alt=" A close up picture of small differently shaped chocolates displayed in rows ; a combination of both filled and solid in white and dark chocolate.">
@@ -66,9 +66,10 @@
         <h3>Want to see more?</h3>
         <hr>
         <ul class="socials">
-            <li><a href="http://www.example.org"><img src="images/instagram-icon.png" width="512" height="512" alt="Instagram icon"></a></li>
-            <li><a href="http://www.example.org"><img src="images/facebook-icon.png" width="512" height="512" alt="Facebook icon"></a></li>
-            <li><a href="http://www.example.org"><img src="images/pinterest-icon.png" width="512" height="512" alt="Pinterest icon"></a></li>
+            <li><a href="http://www.example.org"><img src="images/icons8-instagram-96.png" width="96" height="96" alt="Instagram icon"></a></li>
+            <li><a href="http://www.example.org"><img src="images/icons8-facebook-96.png" width="96" height="96" alt="Facebook icon"></a></li>
+            <li><a href="http://www.example.org"><img src="images/icons8-pinterest-96.png" width="96" height="96" alt="Pinterest icon"></a></li>
+            <li class="attribution"> <a href="https://icons8.com/icon/84884/instagram">Instagram</a>,<a href="https://icons8.com/icon/118487/facebook">Facebook</a>,<a href="https://icons8.com/icon/87072/pinterest">Pinterest</a>icons by<a href="https://icons8.com">Icons8</a></li>
         </ul>
     </footer>
 </body>
