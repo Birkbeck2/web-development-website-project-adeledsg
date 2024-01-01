@@ -4,13 +4,17 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Food Travel Blog</title>
+    <title>Feast and Wonder</title>
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <header>
+        <div class="skip-to-main">
+            <a href="#main">Skip to main content</a>
+        </div>
+        
         <nav class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -21,7 +25,7 @@
             </ul>
         </nav>
         
-        <nav class="breadcrumbs"> <!--Installing breadcrumbs for usability and accessibility purposes. Screen reader reads outloud the breadcrumb and the nav tag gives semantic context. Need to add Aria label.-->
+        <nav class="breadcrumbs"> 
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li>Contact</li>
@@ -29,38 +33,42 @@
         </nav>
     </header>
 
-    <main>
-        <h1 class="city-name">Contact me</h1>
-        <form method="post">
-            <div class="form-section" aria-labelledby="first-name">
-              <label for="first-name">Name</label>
-              <input id="first-name" name="first-name" type="text" placeholder="Enter your first name">
-            </div>
-            <div class="form-section" aria-labelledby="last-name">
-              <label for="last-name">Last Name</label>
-              <input id="last-name" name="last-name" type="text" placeholder="Enter your last name">
-            </div>
-            <div class="form-section" aria-labelledby="email">
-              <label for="email">Email address</address></label>
-              <input id="email" name="email" type="email" placeholder="Enter your e-mail address">
-            </div>
-            <div class="form-section" aria-labelledby="message">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Enter your message"></textarea>
-            </div>
-            <div class="button">
-                <button aria-label="submit form" type="submit">Send</button>
-            </div>
-        </form>
+    <main id="main">
+        <section class="grid-contact"> <!--For the layout of the page-->
+            <h1 class="city-name">Contact me</h1>
+
+            <form method="post"> <!--setting the request method for the browser to use-->
+                <div class="form-section" aria-labelledby="first-name"> <!--Adding aria label for accessibility-->
+                    <label for="first-name">Name</label>
+                    <input id="first-name" name="first-name" type="text" placeholder="Enter your first name">
+                </div>
+                <div class="form-section" aria-labelledby="last-name">
+                    <label for="last-name">Last Name</label>
+                    <input id="last-name" name="last-name" type="text" placeholder="Enter your last name">
+                </div>
+                <div class="form-section" aria-labelledby="email">
+                    <label for="email">Email address</label>
+                    <input id="email" name="email" type="email" placeholder="Enter your e-mail address"> <!--type attribute for safety-->
+                </div>
+                    <div class="form-section" aria-labelledby="message">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Enter your message"></textarea>
+                </div>
+                <div class="button">
+                    <button aria-label="submit form" type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
     </main>
 
     <footer>
-        <h3>Want to see more?</h3>
+        <h2>Want to see more?</h3>
         <hr>
         <ul class="socials">
-            <li><a href="http://www.example.org"><img src="images/instagram-icon.png" width="512" height="512" alt="Instagram icon"></a></li>
-            <li><a href="http://www.example.org"><img src="images/facebook-icon.png" width="512" height="512" alt="Facebook icon"></a></li>
-            <li><a href="http://www.example.org"><img src="images/pinterest-icon.png" width="512" height="512" alt="Pinterest icon"></a></li>
+            <li><a href="http://www.example.org"><img src="images/icons8-instagram-96.png" width="96" height="96" alt="Instagram icon"></a></li>
+            <li><a href="http://www.example.org"><img src="images/icons8-facebook-96.png" width="96" height="96" alt="Facebook icon"></a></li>
+            <li><a href="http://www.example.org"><img src="images/icons8-pinterest-96.png" width="96" height="96" alt="Pinterest icon"></a></li>
+            <li class="attribution"> <a href="https://icons8.com/icon/84884/instagram">Instagram</a>,<a href="https://icons8.com/icon/118487/facebook">Facebook</a>,<a href="https://icons8.com/icon/87072/pinterest">Pinterest</a>icons by<a href="https://icons8.com">Icons8</a></li>
         </ul>
     </footer>
 </body>
