@@ -1,7 +1,11 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/59P2FRZS)
 
 
-This repository contains all the files necessary for the portfolio website Feast and Wonder. Feast and Wonder is a food travel blog with the design goal of creating a pleasurable user experience for the Blind and Visually Impaired. It contains five html documents, one CSS document and an image folder. 
+This repository contains all the files necessary for the portfolio website Feast and Wonder. The website can be found at: 
+
+https://animated-potato-73kqllg.pages.github.io/
+
+Feast and Wonder is a food travel blog with the design goal of creating a pleasurable user experience for the Blind and Visually Impaired. It contains five html documents, one CSS document and an image folder. 
 
 This portfolio website was made in the context of a homework assignment and is not for commercial use. It is submitted along a UX report via Turnitin. 
 
