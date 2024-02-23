@@ -213,6 +213,13 @@ footer hr {
     height: auto; /*Maintaining the aspect ratio*/
     gap: 10px; /*Adding space between video-conatiner and image-container*/
 }
+.flexbox-container-2{
+    display: flex; /*Creating flexible responsive layout*/
+    flex-direction: column; /*Stacking video-container and image-container vertically*/
+    width: 100%; 
+    height: auto; /*Maintaining the aspect ratio*/
+    gap: 10px; /*Adding space between video-conatiner and image-container*/ 
+}
 .video-container {
     display: flex; /*Applying flex to the child element*/
     flex-direction: column; 
@@ -242,9 +249,53 @@ footer hr {
     width: 100%;
     height: auto;
 }
+.image-container-2{
+    display: flex; /*Applying flexbox to the child element*/
+    flex-direction: column;
+    gap: 10px; 
+    width: 100%;
+    height: auto;
+}
 .image-container img {
     width: 100%;
     height: auto;
+}
+.image-container-2 img{
+    width: 100%;
+    height: auto;
+}
+.sketches{
+    display: flex; /*Applying flexbox to the child element*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+    width: 100%;
+    height: auto;
+}
+.sketches img{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+.resources{
+    display: grid; /*Using grid to structure the page*/
+    grid-template-rows: auto auto auto auto; /*Separating title and text*/
+    row-gap: 3%;
+    padding: 5% 5% 5% 5%;
+}
+.resources a {
+    color: white;
+}
+
+.resources p {
+    font-size: 1.5rem;
+}
+
+.grid-second p {
+    font-size: 1.5rem;
+    padding: 5% 5% 5% 5%;
 }
 
 /*Contact form style*/
@@ -341,6 +392,11 @@ footer h3 {
     display: flex;
     flex-direction: column;
 }
+.flexbox-container-2{
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+}
 .video-container {
     display: flex;
     flex-direction: row;
@@ -348,6 +404,12 @@ footer h3 {
     width: 100%;
 }
 .image-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.image-container-2{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -380,7 +442,6 @@ header {
 
 /*Footer Styles*/
 footer {
-    position: fixed;
     width: auto;
     background-color: black;
     margin-top: 2%;
@@ -438,6 +499,13 @@ footer {
     width: 100%;
     height: 100%;
 }
+.flexbox-container-2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
 .video-container{
     display: flex;
     flex-direction: row;
@@ -450,6 +518,12 @@ footer {
     flex-wrap: wrap;
     width: 50%;
 }
+.image-container-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
 .video-container video{
     width: 100%;
     height: auto;
@@ -461,6 +535,20 @@ footer {
 }
 .image-container img{
     width: 45%;
+    height: auto;
+}
+.image-container-2 img{
+    width: 49%;
+    height: auto;
+}
+.sketches{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.sketches img{
+    width: 49%;
     height: auto;
 }
 
