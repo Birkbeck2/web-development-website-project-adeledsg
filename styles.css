@@ -24,6 +24,7 @@ body { /*targetting body so that the width is that of the viewport and height is
     min-height: 100vh;
 }
 
+
 /*Skip to main content styles*/
 .skip-to-main a { /*targetting a tag in element classified as skip to main*/
     position: absolute;
@@ -288,15 +289,14 @@ footer hr {
 .resources a {
     color: white;
 }
-
 .resources p {
     font-size: 1.5rem;
 }
-
 .grid-second p {
     font-size: 1.5rem;
     padding: 5% 5% 5% 5%;
 }
+
 
 /*Contact form style*/
 form {
@@ -336,6 +336,44 @@ button {
     padding: 10px;
     margin: 10px 0;
     border-radius: 10px;
+}
+
+.flexbox-container-3{
+    display: flex; /*Creating flexible responsive layout*/
+    flex-direction: column; /*Stacking video-container and image-container vertically*/
+    width: 100%; 
+    height: auto; /*Maintaining the aspect ratio*/
+    gap: 10px; /*Adding space between video-conatiner and image-container*/ 
+}
+iframe{
+    width: 100%;
+    height: 90vh;
+    margin-bottom: 10px;
+}
+.image-container-3{
+    display: flex; /*Applying flexbox to the child element*/
+    flex-direction: column;
+    gap: 10px; 
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+#reader{
+    width: 40%;
+    height: auto;
+}
+#page{
+    width: 40%;
+    height: auto;
+}
+#website{
+    width: 70%;
+    height: auto;
+}
+#gif{
+    background-color: white;
+    width: 50%;
+    height: 10vh;
 }
 
 @media screen and (min-width:601px) and (max-width:900px){ /*Adding Media Query*/
@@ -584,6 +622,47 @@ button {
 }
 .button{
     justify-content: left;
+}
+
+
+
+/*Prototypes*/
+.flexbox-container-3{
+    display: flex; /*Creating flexible responsive layout*/
+    flex-direction: column; /*Stacking video-container and image-container vertically*/
+    width: 100%; 
+    height: auto; /*Maintaining the aspect ratio*/
+    gap: 10px; /*Adding space between video-conatiner and image-container*/ 
+}
+iframe{
+    width: 100%;
+    height: 90vh;
+    margin-bottom: 10px;
+}
+.image-container-3{
+    display: flex; /*Applying flexbox to the child element*/
+    flex-direction: column;
+    gap: 10px; 
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+#reader{
+    width: 20%;
+    height: auto;
+}
+#page{
+    width: 15%;
+    height: auto;
+}
+#website{
+    width: 50%;
+    height: auto;
+}
+#gif{
+    background-color: white;
+    width: 20%;
+    height: 10vh;
 }
 
 }
