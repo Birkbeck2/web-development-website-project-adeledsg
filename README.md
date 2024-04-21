@@ -4,6 +4,7 @@
 This repository contains all the files necessary for the portfolio website Feast and Wonder. The website can be found at: 
 
 [https://animated-potato-73kqllg.pages.github.io/](https://birkbeck2.github.io/web-development-website-project-adeledsg/)
+https://birkbeck2.github.io/web-development-website-project-adeledsg/ 
 
 Feast and Wonder is a food travel blog with the design goal of creating a pleasurable user experience for the Blind and Visually Impaired. It contains five html documents, one CSS document and an image folder. 
 
