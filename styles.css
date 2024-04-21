@@ -1,0 +1,668 @@
+/*Cascading CSS and Phone version*/
+
+*{ /*resetting - Applied the following properties from https://www.freecodecamp.org/news/html-page-width-height/#:~:text=If%20you%20set%20the%20width,width%20value%20on%20the%20body. To avoid a horizontal scrollbar, and body to be 100% of the viewport, default margins removed.*/
+    margin: 0; /*removing all default margins*/
+    padding: 0; /*removing all default paddings*/
+    box-sizing: border-box; /*Including width and height of padding and border when calculating the element's width and height.*/
+}
+html { /*root element of my webpage. Specifying here the default styles for my entire webpage, cascading onto the child elements.*/
+    font-size: 16px; 
+    font-family: Arial, Helvetica, sans-serif; 
+    background-color: black; 
+    color: white;
+}
+body { /*targetting body so that the width is that of the viewport and height is at least that of the viewport*/
+    min-height: 100vh;
+    width: 100%; 
+}
+#main{ /*targetting element that has this id*/
+    margin-top: 20%; 
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 5%; 
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/*Skip to main content styles*/
+.skip-to-main a { /*targetting a tag in element classified as skip to main*/
+    position: absolute;
+    top: -500px; /*placing the element 500px above the viewport hidding it from view but accessible via keyboard*/
+    left: 0;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+.skip-to-main a:focus { /*targetting a tag in element classified as skip to main when focused*/
+    top: 0;
+}
+
+/*Nav bar Styles*/
+header {
+    position: fixed; /*Applying this property so that my header does not move when the user scrolls vertically*/
+    left: 0; /*aligning header to the left of the viewport*/
+    right: 0; 
+    top: 0;
+    height: 11%; 
+    z-index: 1; /*Giving a stacking order that is more than 0 so that my header appears on top of any other content*/
+    background-color: black; 
+    padding-left: 10%; 
+    padding-right: 10%;
+}
+.navbar {
+    margin-top: 3%; 
+    width: 100%;
+    height: auto;
+}
+.navbar ul {
+    list-style-type: none; 
+    display: flex; /*applying flexbox to ul element*/
+    justify-content: space-between; /*distributing the child elements li evenly within ul*/
+}
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/*Breadcrumbs Styles*/
+.breadcrumbs{ /*targetting elements classified as breadcrumbs*/
+    display: flex;
+    position: fixed;
+    right: 0;
+    line-height: 0.05;
+    margin-top: 3%;
+    margin-right: 10%;
+}
+.breadcrumbs ul { /*targetting ul tag in elements classified as breadcrumbs*/
+    display: flex;
+    justify-content: end;
+}
+.breadcrumbs ul li { 
+    display: inline;
+    list-style: none;
+    text-decoration: none;
+}
+.breadcrumbs li a { 
+    text-decoration: none;
+    color: white;
+}
+.breadcrumbs li+li::before { 
+    color: white; 
+    content: "/\00a0 ";
+}
+
+/*Hover Styles*/
+nav a:hover { /*targetting a tag in nav tags, using a pseudo-class to change the appearance of the a tag when the user hovers over it*/
+    padding-bottom: 1%;
+    border-bottom-style: solid;
+}
+
+/* Focus Styles for accessibility*/
+.navbar a:focus { /*targetting a tag in my elements classified as navbar, using a pseudo-class to change the appearance of the a tag when the user focuses on it over it*/
+    outline: 2px solid white;
+    background-color: white;
+    color: black;
+}
+.breadcrumbs a:focus {
+    outline: 2px solid white;
+    background-color: white;
+    color: black;
+}
+.socials a:focus { 
+    outline: 2px solid white;
+}
+
+/*Footer Styles*/
+footer { 
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding-right: 10%;
+    padding-left: 10%;
+    width: 100%;
+    text-decoration: none;
+}
+footer h2 { 
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+h3{ 
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+footer hr { 
+    width: 100%;
+}
+.socials { 
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+.socials li{
+    display: flex;
+    justify-content: center;
+}
+.socials a{
+    display: flex;
+    justify-content: center;
+}
+.socials img {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+.attribution {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    align-content: center;
+}
+.attribution a {
+    color: white;
+    padding-right: 0.9%;
+    padding-left: 0.9%;
+}
+
+/*Landing page styles*/
+.grid-main { 
+    display: grid; /*Using grid to structure the page*/
+    grid-template-rows: auto auto; /*Separating title and text*/
+    row-gap: 3%;
+}
+.title-container {
+    position: relative;
+    left: 0; /*Assuring the title is on the left of the page*/
+    line-height: 0.9; /*Reducing line height for the title*/
+}
+.title-container hr {
+    margin-top: 3%; 
+}
+.larger {
+    font-size: 3.5rem; /*Making the font size 3.5 bigger than the one set up in the html tag*/
+}
+.smaller {
+    font-size: 2rem;
+    margin-left: 2%;
+}
+.between {
+    font-size: 2rem;
+}
+.body-container p {
+    line-height: 2; /*Doubling line height to increase readability*/
+}
+
+/*Gallery pages styles*/
+.city-name {
+    font-size: 2rem;
+    margin-bottom: 3%;
+}
+.flexbox-container {
+    display: flex; /*Creating flexible responsive layout*/
+    flex-direction: column; /*Stacking video-container and image-container vertically*/
+    width: 100%; 
+    height: auto; /*Maintaining the aspect ratio*/
+    gap: 10px; /*Adding space between video-conatiner and image-container*/
+}
+.flexbox-container-2{
+    display: flex; /*Creating flexible responsive layout*/
+    flex-direction: column; /*Stacking video-container and image-container vertically*/
+    width: 100%; 
+    height: auto; /*Maintaining the aspect ratio*/
+    gap: 10px; /*Adding space between video-conatiner and image-container*/ 
+}
+.video-container {
+    display: flex; /*Applying flex to the child element*/
+    flex-direction: column; 
+    gap: 10px; 
+    width: 100%;
+    height: auto;
+}
+.video-transcript {
+    width: 100%;
+    height: auto;
+}
+.video-container video{
+    width: 100%;
+    height: auto;
+}
+.video-transcript h2 {
+    font-size: 1.5rem;
+    margin-bottom: 3%; 
+}
+.video-transcript p {
+    line-height: 2; 
+}
+.image-container {
+    display: flex; /*Applying flexbox to the child element*/
+    flex-direction: column;
+    gap: 10px; 
+    width: 100%;
+    height: auto;
+}
+.image-container-2{
+    display: flex; /*Applying flexbox to the child element*/
+    flex-direction: column;
+    gap: 10px; 
+    width: 100%;
+    height: auto;
+}
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+.image-container-2 img{
+    width: 100%;
+    height: auto;
+}
+.sketches{
+    display: flex; /*Applying flexbox to the child element*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+    width: 100%;
+    height: auto;
+}
+.sketches img{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+.resources{
+    display: grid; /*Using grid to structure the page*/
+    grid-template-rows: auto auto auto auto; /*Separating title and text*/
+    row-gap: 3%;
+    padding: 5% 5% 5% 5%;
+}
+.resources a {
+    color: white;
+}
+.resources p {
+    font-size: 1.5rem;
+}
+.grid-second p {
+    font-size: 1.5rem;
+    padding: 5% 5% 5% 5%;
+}
+
+
+/*Contact form style*/
+form {
+    display: flex; /*Creating flexbox layout for the contact form*/
+    flex-direction: row; 
+    flex-wrap: wrap;
+    padding-left: 10%;
+    padding-right: 10%; 
+}
+.form-section {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.form-section input{
+    width: 100%;
+    padding: 2%;
+    margin: 2% 0;
+    border-radius: 10px;
+}
+.form-section textarea{
+    width: 100%;
+    padding: 2%;
+    margin: 2% 0;
+    border-radius: 10px;
+    font-family: inherit;
+}
+.button {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+button {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.flexbox-container-3{
+    display: flex; /*Creating flexible responsive layout*/
+    flex-direction: column; /*Stacking video-container and image-container vertically*/
+    width: 100%; 
+    height: auto; /*Maintaining the aspect ratio*/
+    gap: 10px; /*Adding space between video-conatiner and image-container*/ 
+}
+iframe{
+    width: 100%;
+    height: 90vh;
+    margin-bottom: 10px;
+}
+.image-container-3{
+    display: flex; /*Applying flexbox to the child element*/
+    flex-direction: column;
+    gap: 10px; 
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+#reader{
+    width: 40%;
+    height: auto;
+}
+#page{
+    width: 40%;
+    height: auto;
+}
+#website{
+    width: 70%;
+    height: auto;
+}
+#gif{
+    background-color: white;
+    width: 50%;
+    height: 10vh;
+}
+
+@media screen and (min-width:601px) and (max-width:900px){ /*Adding Media Query*/
+
+/*footer styles*/
+footer h3 {
+    text-align: center;
+}
+.socials img {
+    width: 90%;
+    height: auto;
+}
+.attribution {
+    font-size: 0.8rem;
+}
+
+/*Landing page*/
+.grid-main{
+    position: relative;
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 0.5fr 1fr;
+}
+.title-container {
+    grid-row: 1;
+    grid-column: 1;
+    position: relative;
+    left: 0px;
+    line-height: 0.9;
+}
+.body-container {
+    grid-row: 2;
+    grid-column: 2;
+    width: 100%;
+    margin-top: 3%;
+}
+.body-container p {
+    line-height: 1.7;
+}
+
+/*gallery pages styles*/
+.grid-second{
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 2%;
+    text-align: center;
+}
+.city-name{
+    text-align: center;
+}
+.flexbox-container {
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+}
+.flexbox-container-2{
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+}
+.video-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.image-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.image-container-2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.video-container video {
+    width: 95%;
+}
+.video-transcript {
+    width: 95%;
+}
+.image-container img{
+    width: 47%; /*modified number until wanted effect was reached*/
+    height: auto;
+}
+}
+
+@media screen and (min-width:901px) { /*Adding Media Query*/
+
+/*Nav bar Styles*/
+header {
+    height: 17%;
+}
+.navbar a {
+    font-size: 1.5rem;
+}
+.breadcrumbs li {
+    font-size: 1.5rem;
+}
+
+/*Footer Styles*/
+footer {
+    width: auto;
+    background-color: black;
+    margin-top: 2%;
+}
+.socials {
+    gap: 50px;
+}
+.socials img {
+    width: 50%;
+    height: auto;
+}
+.attribution {
+    font-size: 0.9rem;
+}
+
+/*Landing page styles*/
+.grid-main {
+    position: relative;
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 0.5fr 1fr;
+}
+.title-container {
+    grid-row: 1;
+    grid-column: 1;
+    position: relative;
+    left: 0px;
+    line-height: 0.9;
+}
+.body-container {
+    grid-row: 2;
+    grid-column: 2;
+    margin-top: 3%;
+}
+.body-container p {
+    font-size: 1.5rem;
+    line-height: 1.7;
+}
+
+/*gallery pages styles*/
+.grid-second{
+    display: grid;
+    grid-template-rows: 0.5fr;
+    text-align: center;
+}
+.city-name{
+    text-align: center;
+    margin-bottom: 3%;
+}
+.flexbox-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+.flexbox-container-2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+.video-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 45%;
+}
+.image-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50%;
+}
+.image-container-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.video-container video{
+    width: 100%;
+    height: auto;
+}
+.video-transcript {
+    line-height: 1.7;
+    width: 100%;
+    height: auto;
+}
+.image-container img{
+    width: 45%;
+    height: auto;
+}
+.image-container-2 img{
+    width: 49%;
+    height: auto;
+}
+.sketches{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.sketches img{
+    width: 49%;
+    height: auto;
+}
+
+/*Contact form styles*/
+.grid-contact {
+    display: grid;
+    grid-template-rows: auto auto;
+}
+form {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    row-gap: 3%;
+    column-gap: 3%;
+}
+.form-section label {
+    font-size: 1.2rem;
+}
+.form-section input{
+    padding: 5%;
+    margin: 5% 0;
+    border-radius: 15px;
+}
+.form-section textarea{
+    padding: 5%;
+    margin: 5% 0;
+    border-radius: 15px;
+}
+button {
+    padding: 3%;
+    margin: 3% 0;
+    border-radius: 15px;
+}
+.button{
+    justify-content: left;
+}
+
+
+
+/*Prototypes*/
+.flexbox-container-3{
+    display: flex; /*Creating flexible responsive layout*/
+    flex-direction: column; /*Stacking video-container and image-container vertically*/
+    width: 100%; 
+    height: auto; /*Maintaining the aspect ratio*/
+    gap: 10px; /*Adding space between video-conatiner and image-container*/ 
+}
+iframe{
+    width: 100%;
+    height: 90vh;
+    margin-bottom: 10px;
+}
+.image-container-3{
+    display: flex; /*Applying flexbox to the child element*/
+    flex-direction: column;
+    gap: 10px; 
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+#reader{
+    width: 20%;
+    height: auto;
+}
+#page{
+    width: 15%;
+    height: auto;
+}
+#website{
+    width: 50%;
+    height: auto;
+}
+#gif{
+    background-color: white;
+    width: 20%;
+    height: 10vh;
+}
+
+}
